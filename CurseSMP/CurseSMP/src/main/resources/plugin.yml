@@ -1,0 +1,30 @@
+name: CurseSMP
+version: '${version}'
+main: dev.cursesmp.CurseSMP
+api-version: '26.2'
+description: Cursed SMP - curses, mythic weapons and server events
+commands:
+  cursesmp:
+    description: Admin command (give, start, randomcurse, energy, reload)
+    usage: /cursesmp <give|start|randomcurse|energy|reload>
+    permission: cursesmp.admin
+  cursetrust:
+    description: Trust a player so their curses and mythics deal 0 damage to you
+    usage: /cursetrust <player>
+  cursetrustremove:
+    description: Remove a trust link between you and a player
+    usage: /cursetrustremove <player>
+  ability:
+    description: Use an ability of your curse
+    usage: /ability <1|2|3|4>
+  curseinfo:
+    description: Show your curse, energy and cooldowns
+    usage: /curseinfo
+  mythiceventstart:
+    description: Start a mythic event
+    usage: /mythiceventstart <ShadowSlayerSwordEvent|SoulCrusherEvent|CursedShieldEvent>
+    permission: cursesmp.admin
+permissions:
+  cursesmp.admin:
+    description: Access to admin commands
+    default: op

@@ -1,0 +1,49 @@
+# Set to true once the matching resource pack is installed (items use the
+# "cursesmp:<name>" item model). Leave false to avoid missing-texture items.
+custom-models: false
+
+# Seconds without landing a hit before a combo resets.
+combo-timeout-seconds: 4
+
+damage:
+  # true  = abilities deal exactly the hearts listed in the design doc (ignores armor)
+  # false = abilities go through normal armor/enchantment reduction
+  ignore-armor: true
+
+cooldowns:           # seconds
+  bleeding:      {a1: 45,  a2: 60,  a3: 105}
+  reaper:        {a1: 90,  a2: 60,  a3: 90}     # a1 had no cooldown in the doc (90 assumed)
+  freezing:      {a1: 150, a2: 60,  a3: 90}
+  earth:         {a1: 60,  a2: 85,  a3: 165}
+  angel:         {a1: 90,  a2: 120, a3: 150}
+  dragon:        {a1: 105, a2: 150, a3: 180, a4: 5}  # a4 had no cooldown in the doc (5 assumed)
+  shadow_slayer: {a1: 60,  a2: 120}
+  soul_crusher:  {a1: 120, a2: 30}
+
+bleeding:
+  bonus-chance: 0.30      # chance for the bonus hit after a 5-hit combo
+  bonus-multiplier: 1.10  # +10% damage
+
+reaper:
+  skeleton-seconds: 30
+  chain-damage-per-block: 0.4   # HP per block of distance (capped at 8 HP)
+
+freezing:
+  domain-radius: 7
+  zone-seconds: 20
+
+angel:
+  potion-multiplier: 1.5
+
+ritual:
+  seconds: 300
+  quit-penalty: true   # logging out during a ritual counts as dying (curse lost)
+
+events:
+  meteor-radius: 1200
+  shards-per-meteor: 4
+  shadow-glow-seconds: 600
+  handle-chance: 0.01        # per shard picked up, one random online player gets the handle
+  soul-crusher-chance: 0.05  # each online player rolls this; first winner gets the mace
+  assassin-radius: 1500
+  assassin-health: 150
